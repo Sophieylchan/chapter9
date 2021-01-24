@@ -5,16 +5,15 @@ theta= 80
 x= 0.5
 y0= 1
 
-print("components :", g, v0, theta, y0, x)
-# checking it works
-
-# not sure if we need to convert to m/s (v0 = v0/3.6)
+# checking theta
 theta = theta*(pi/180)
-# checking theta along the way
-print("theta :",theta)
+print("Acceleration =", g,"m/s")
+print("Velocity =", v0, "m/s")
+print("Theta =",theta, "radians")
+print("Horizontal distance =", x, "m")
+print("Barrel height =", y0, "m")
 
-# (attempt 1) y = y0 + x math.tan(theta) - (g**2/2(v0 math.cos(theta))**2)
-# (attempt 2) y = x*tan(theta) - 1/(2*v0**2)*g*x**2/((cos(theta))**2) + y0
 y = y0 + x*tan(theta) - g*x**2 / (2*(v0*cos(theta))**2)
-
-print("answer :", y)
+print("\n")
+print(y0, "+", x, "x", tan(theta), "-", g*x**2, "/", (2*(v0*cos(theta))**2), "=", y)
+print("Height of projectile =", y,"m")
