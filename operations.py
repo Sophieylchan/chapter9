@@ -1,7 +1,7 @@
-var = input("Please enter a value: ")
-var = var.upper()
-print(var)
+myvalue = input("Please enter a value: ")
+myvalue = myvalue.upper()
+print(myvalue)
 
 
-print(len(var))
-print(var.isdecimal())
+print(len(myvalue))
+print(myvalue.isdecimal())
